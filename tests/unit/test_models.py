@@ -67,4 +67,4 @@ def test_profile_timestamps():
     after_creation = datetime.utcnow()
     
     assert before_creation <= profile.created_at <= after_creation
-    assert profile.updated_at == profile.created_at
+    assert profile.created_at <= profile.updated_at

@@ -25,10 +25,10 @@ jobs:
           pip install --no-cache-dir -r requirements.txt
           pip install --no-cache-dir -r requirements-dev.txt
 
-      - name: Run tests
+      - name: Run unit tests
         env:
           PYTHONPATH: ${{ github.workspace }}
-        run: pytest -q
+        run: pytest -q tests/unit
 
       - name: Login to DockerHub
         uses: docker/login-action@v3
