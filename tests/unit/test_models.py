@@ -21,7 +21,7 @@ def test_profile_creation():
 
 def test_profile_user_id_required():
     """Тест что user_id обязателен"""
-    with pytest.raises(Exception):  # SQLAlchemy / Pydantic ошибка
+    with pytest.raises(Exception):
         Profile(
             full_name="John Doe",
             email="john@example.com"
