@@ -31,3 +31,4 @@ class ProfileEvent(BaseModel):
     full_name: Optional[str] = None
     email: Optional[str] = None
     timestamp: datetime = Field(default_factory=datetime.utcnow)
+gg
